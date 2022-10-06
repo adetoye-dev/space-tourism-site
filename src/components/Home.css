@@ -1,0 +1,17 @@
+.home {
+  background-image: url("../assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 480px) {
+  .home {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media (min-width: 800px) {
+  .home {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
+}
