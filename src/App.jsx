@@ -5,6 +5,7 @@ import Home from "./components/Home";
 function App() {
   return (
     <>
+      <NavBar />
       <main className="app">
         <Home />
       </main>
