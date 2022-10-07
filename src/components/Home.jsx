@@ -3,9 +3,9 @@ import "./Home.css";
 const Home = () => {
   return (
     <section className="section home">
-      <div className="home-content-container">
+      <div className="container home-content-container">
         <div className="home-text-details">
-          <h2 className="home-sub-tile">SO, YOU WANT TO TRAVEL TO</h2>
+          <h2 className="home-sub-title">SO, YOU WANT TO TRAVEL TO</h2>
           <h1 className="home-title">SPACE</h1>
           <p className="home-desc">
             Let’s face it; if you want to go to space, you might as well

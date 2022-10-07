@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #0b0d17;
+  --secondary-color: #d0d6f9;
+  --accent-color: #ffffff;
+  --barlow: "Barlow", sans-serif;
+  --barlow-condensed: "Barlow Condensed", sans-serif;
+  --bellefair: "Bellefair", serif;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -8,4 +17,9 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  color: var(--accent-color);
+  font-family: var(--barlow);
 }
