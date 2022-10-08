@@ -119,7 +119,7 @@
     height: 0.1rem;
     left: 12rem;
     background-color: var(--accent-color);
-    opacity: 0.4;
+    opacity: 0.3;
     z-index: 1000;
   }
 }
