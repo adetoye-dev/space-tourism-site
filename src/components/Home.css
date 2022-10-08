@@ -70,7 +70,7 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .home {
     background-image: url("../assets/home/background-home-desktop.jpg");
   }
