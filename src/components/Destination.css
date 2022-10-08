@@ -30,6 +30,23 @@
   max-width: 100%;
 }
 
+.destination-nav {
+  outline: 2px solid blue;
+  list-style: none;
+  font-family: var(--barlow-condensed);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.destination-nav-item {
+  cursor: pointer;
+}
+
 .destination-title {
   font-family: var(--bellefair);
   text-transform: uppercase;
@@ -79,6 +96,10 @@
   .destination-image img {
     width: 25rem;
   }
+  .destination-nav {
+    font-size: 1.6rem;
+    letter-spacing: 0.27rem;
+  }
   .destination-title {
     font-size: 8rem;
   }
@@ -103,6 +124,9 @@
   }
   .destination-image img {
     width: 40rem;
+  }
+  .destination-nav {
+    justify-content: flex-start;
   }
   .destination-title {
     font-size: 10rem;
