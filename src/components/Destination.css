@@ -72,6 +72,7 @@
 .travel-details {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
   gap: 3rem;
 }
 
@@ -127,6 +128,7 @@
   }
   .destination-nav {
     justify-content: flex-start;
+    gap: 3rem;
   }
   .destination-title {
     font-size: 10rem;
@@ -137,5 +139,6 @@
   }
   .travel-details {
     justify-content: flex-start;
+    margin-bottom: 0;
   }
 }
