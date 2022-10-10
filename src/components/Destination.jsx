@@ -1,74 +1,41 @@
-import { useEffect, useState } from "react";
-import data from "../../data.json";
-import "./Destination.css";
-import DestinationBox from "./DestinationBox";
-
-const Destination = () => {
-  const [allDestinations] = useState(data.destinations);
-  const [destinations, setDestinations] = useState([]);
-
-  const [destinationNavItems, setDestinationNavItems] = useState([]);
-
-  useEffect(() => {
-    setDestinations(
-      allDestinations.map((destination) => ({
-        ...destination,
-        selected: false,
-      }))
-    );
-
-    setDestinationNavItems(
-      allDestinations.map((dest) => {
-        return { name: dest.name, selected: false };
-      })
-    );
-
-    selectDestination("Moon");
-  }, []);
-
-  const pickDestination = (id) => {
-    setDestinations((prevDestinations) => {
-      return prevDestinations.map((destination) => {
-        return destination.name === id
-          ? { ...destination, selected: true }
-          : { ...destination, selected: false };
-      });
-    });
-  };
-
-  const selectDestination = (id) => {
-    setDestinationNavItems((prevNavItems) => {
-      return prevNavItems.map((item) => {
-        return item.name === id
-          ? { ...item, selected: true }
-          : { ...item, selected: false };
-      });
-    });
-    pickDestination(id);
-  };
-
-  const renderDestinations = destinations.map((destination) => {
+const Destination = ({ destination, navItems, selectDestination }) => {
+  const renderNavItems = navItems.map((item) => {
     return (
-      destination.selected && (
-        <DestinationBox
-          destination={destination}
-          selectDestination={selectDestination}
-          key={destination.name}
-          navItems={destinationNavItems}
-        />
-      )
+      <li
+        key={item.name}
+        onClick={(e) => selectDestination(item.name)}
+        className={
+          item.selected
+            ? "selected destination-nav-item"
+            : "destination-nav-item"
+        }
+      >
+        {item.name}
+      </li>
     );
   });
 
   return (
-    <section className="section destination">
-      <div className="container destination-content-container">
-        <h1 className="page-title">
-          <span>01</span>Pick your destination
-        </h1>
-        {renderDestinations}
+    <div className="destination-about">
+      <div className="destination-image">
+        <img src={`./src${destination.images.webp}`} alt="" />
       </div>
-    </section>
+      <div className="destination-details">
+        <ul className="destination-nav">{renderNavItems}</ul>
+        <h2 className="destination-title">{destination.name}</h2>
+        <p className="destination-desc">{destination.description}</p>
+        <div className="travel-details">
+          <div className="distance">
+            <h3 className="travel-details-title">Avg. Distance</h3>
+            <h2 className="travel-details-text">{destination.distance}</h2>
+          </div>
+          <div className="travel-time">
+            <h3 className="travel-details-title">Est. Travel time</h3>
+            <h2 className="travel-details-text">{destination.travel}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
