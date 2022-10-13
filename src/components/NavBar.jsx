@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../assets/shared/logo.svg";
 import { useState } from "react";
@@ -32,24 +33,24 @@ const NavBar = () => {
           data-visible={attributes.dataVisible}
         >
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link to="/" className="nav-link">
               <span aria-hidden="true">00</span>Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link to="/destination" className="nav-link">
               <span aria-hidden="true">01</span>Destination
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link to="/crew" className="nav-link">
               <span aria-hidden="true">02</span>Crew
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <Link to="/technology" className="nav-link">
               <span aria-hidden="true">03</span>Technology
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
