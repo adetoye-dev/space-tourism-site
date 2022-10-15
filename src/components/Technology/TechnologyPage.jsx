@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Technology.css";
 import Technology from "./Technology";
-import data from "../../data.json";
+import data from "../../../data.json";
 
 const TechnologyPage = () => {
   const [allTechnologies, setAllTechnologies] = useState([]);

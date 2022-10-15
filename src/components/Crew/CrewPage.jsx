@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Crew.css";
 import Crew from "./Crew";
-import data from "../../data.json";
+import data from "../../../data.json";
 
 const CrewPage = () => {
   const [allCrews, setAllCrews] = useState([]);

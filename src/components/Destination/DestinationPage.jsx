@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import data from "../../data.json";
+import data from "../../../data.json";
 import "./Destination.css";
 import Destination from "./Destination";
 
