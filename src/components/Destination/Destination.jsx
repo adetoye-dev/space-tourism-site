@@ -18,7 +18,7 @@ const Destination = ({ destination, navItems, selectDestination }) => {
   return (
     <div className="destination-about">
       <div className="destination-image">
-        <img src={`./src${destination.images.webp}`} alt="" />
+        <img src={destination.images.webp} alt="" />
       </div>
       <div className="destination-details">
         <ul className="destination-nav">{renderNavItems}</ul>

@@ -21,7 +21,7 @@ const Crew = ({ crew, selectCrew, navItems }) => {
         <div className="crew-nav">{renderNavItems}</div>
       </div>
       <div className="crew-image">
-        <img src={`./src${crew.images.webp}`} alt="crew-image" />
+        <img src={crew.images.webp} alt="crew-image" />
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import logo from "../assets/shared/logo.svg";
 import { useState } from "react";
 const NavBar = () => {
   const [attributes, setAttributes] = useState({
@@ -18,7 +17,7 @@ const NavBar = () => {
   return (
     <header className="header">
       <span className="logo">
-        <img src={logo} />
+        <img src="./assets/shared/logo.svg" />
       </span>
       <nav className="nav">
         <button

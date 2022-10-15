@@ -26,11 +26,8 @@ const Technology = ({ tech, selectTech, navItems }) => {
       </div>
       <figure class="technology-image">
         <picture>
-          <source
-            media="(max-width: 900px)"
-            srcset={`./src${tech.images.landscape}`}
-          />
-          <img src={`./src${tech.images.portrait}`} alt="tech image" />
+          <source media="(max-width: 900px)" srcset={tech.images.landscape} />
+          <img src={tech.images.portrait} alt="tech image" />
         </picture>
       </figure>
     </div>
