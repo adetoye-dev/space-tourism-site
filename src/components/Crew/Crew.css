@@ -3,11 +3,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
 }
 
 .crew-container {
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .crew-details-container {
@@ -53,14 +52,17 @@
   color: var(--secondary-color);
   font-size: 1.8rem;
   line-height: 3.2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .crew-image {
-  width: 25rem;
+  width: 100%;
+  border-bottom: 2px solid #383b4b;
+  display: flex;
+  justify-content: center;
 }
 .crew-image img {
-  max-width: 100%;
+  width: 25rem;
 }
 
 .crew-nav {
@@ -95,8 +97,18 @@
   .crew-details-container {
     flex-direction: column;
   }
+  .about-crew {
+    margin-block-start: 5rem;
+  }
+  .crew-bio {
+    margin-bottom: 3rem;
+  }
   .about-crew-container {
     flex-direction: column;
+  }
+  .crew-image {
+    width: auto;
+    border: none;
   }
   .crew-image img {
     width: 35rem;
@@ -109,12 +121,17 @@
 @media (min-width: 900px) {
   .crew {
     background-image: url("../../assets/crew/background-crew-desktop.jpg");
+    align-items: center;
+  }
+  .crew-bio {
+    margin-bottom: 0;
   }
   .crew-details-container {
     flex-direction: row;
   }
   .about-crew {
     text-align: left;
+    margin-block: 5rem;
   }
   .crew-image img {
     right: 5rem;
@@ -126,6 +143,8 @@
 
 @media (min-width: 1048px) {
   .crew-image img {
-    right: 14rem;
+    right: 12rem;
+    height: 48rem;
+    width: auto;
   }
 }
