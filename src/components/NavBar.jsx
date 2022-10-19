@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { useState } from "react";
 const NavBar = () => {
@@ -32,24 +32,44 @@ const NavBar = () => {
           data-visible={attributes.dataVisible}
         >
           <li className="nav-item">
-            <Link to="/" className="nav-link">
+            <NavLink
+              to="/"
+              className={({ isActive }) => {
+                return isActive ? "is-active nav-link" : "nav-link";
+              }}
+            >
               <span aria-hidden="true">00</span>Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/destination" className="nav-link">
+            <NavLink
+              to="/destination"
+              className={({ isActive }) => {
+                return isActive ? "is-active nav-link" : "nav-link";
+              }}
+            >
               <span aria-hidden="true">01</span>Destination
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/crew" className="nav-link">
+            <NavLink
+              to="/crew"
+              className={({ isActive }) => {
+                return isActive ? "is-active nav-link" : "nav-link";
+              }}
+            >
               <span aria-hidden="true">02</span>Crew
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/technology" className="nav-link">
+            <NavLink
+              to="/technology"
+              className={({ isActive }) => {
+                return isActive ? "is-active nav-link" : "nav-link";
+              }}
+            >
               <span aria-hidden="true">03</span>Technology
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
