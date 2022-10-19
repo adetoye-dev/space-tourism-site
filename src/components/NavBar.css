@@ -98,7 +98,7 @@
   }
   .nav-item {
     padding-inline: 0;
-    padding-block: 2.5rem;
+    padding-block: 3rem;
   }
   .nav-item:has(a.is-active) {
     border: none;
