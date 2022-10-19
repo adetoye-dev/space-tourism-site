@@ -37,6 +37,7 @@ const NavBar = () => {
               className={({ isActive }) => {
                 return isActive ? "is-active nav-link" : "nav-link";
               }}
+              onClick={() => setAttributes(false)}
             >
               <span aria-hidden="true">00</span>Home
             </NavLink>
@@ -47,6 +48,7 @@ const NavBar = () => {
               className={({ isActive }) => {
                 return isActive ? "is-active nav-link" : "nav-link";
               }}
+              onClick={() => setAttributes(false)}
             >
               <span aria-hidden="true">01</span>Destination
             </NavLink>
@@ -57,6 +59,7 @@ const NavBar = () => {
               className={({ isActive }) => {
                 return isActive ? "is-active nav-link" : "nav-link";
               }}
+              onClick={() => setAttributes(false)}
             >
               <span aria-hidden="true">02</span>Crew
             </NavLink>
@@ -67,6 +70,7 @@ const NavBar = () => {
               className={({ isActive }) => {
                 return isActive ? "is-active nav-link" : "nav-link";
               }}
+              onClick={() => setAttributes(false)}
             >
               <span aria-hidden="true">03</span>Technology
             </NavLink>
