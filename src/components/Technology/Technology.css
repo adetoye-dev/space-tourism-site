@@ -22,7 +22,6 @@
 
 .technology-about-container {
   padding-inline: 5%;
-  outline: 2px solid blue;
   display: flex;
   flex-direction: column;
   gap: 5rem;
