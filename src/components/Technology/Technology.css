@@ -39,10 +39,14 @@
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid var(--accent-color);
+  border: 1px solid rgb(255 255 255 / 0.3);
   font-family: var(--bellefair);
   color: var(--accent-color);
   font-size: 3.2rem;
+}
+
+.tech-nav-item:hover {
+  border: 1px solid var(--accent-color);
 }
 
 .tech-nav-selected {
