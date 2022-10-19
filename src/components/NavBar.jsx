@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <header className="header">
       <span className="logo">
-        <img src="./assets/shared/logo.svg" />
+        <img src="./assets/shared/logo.svg" alt="logo" />
       </span>
       <nav className="nav">
         <button
