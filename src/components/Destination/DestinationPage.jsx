@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import data from "../../../data.json";
 import "./Destination.css";
 import Destination from "./Destination";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const DestinationPage = () => {
   const [allDestinations] = useState(data.destinations);
   const [destinations, setDestinations] = useState([]);
 
   const [destinationNavItems, setDestinationNavItems] = useState([]);
+  const [destParent] = useAutoAnimate();
 
   useEffect(() => {
     setDestinations(
@@ -62,7 +64,7 @@ const DestinationPage = () => {
 
   return (
     <section className="section destination">
-      <div className="container destination-content-container">
+      <div className="container destination-content-container" ref={destParent}>
         <h1 className="page-title">
           <span>01</span>Pick your destination
         </h1>

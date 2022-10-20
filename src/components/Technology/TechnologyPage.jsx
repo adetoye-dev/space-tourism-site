@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import "./Technology.css";
 import Technology from "./Technology";
 import data from "../../../data.json";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const TechnologyPage = () => {
   const [allTechnologies, setAllTechnologies] = useState([]);
   const [techNavItems, setTechNavItems] = useState([]);
+
+  const [techParent] = useAutoAnimate();
 
   useEffect(() => {
     setAllTechnologies(
@@ -49,7 +52,7 @@ const TechnologyPage = () => {
 
   return (
     <section className="section technology">
-      <div className="container technology-content-container">
+      <div className="container technology-content-container" ref={techParent}>
         <h1 className="page-title tech-page-title">
           <span>03</span>SPACE LAUNCH 101
         </h1>
